@@ -3,9 +3,13 @@ import { Negociacao } from './domain/index.js';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
+import 'bootstrap/js/modal.js';
 import '../css/style.css';
 
-const controller = new NegociacaoController();
+$('h1').on('click',() => alert('você me clicou'));
+console.log($('h1').modal);
+
+const scontroller = new NegociacaoController();
 const negociacao = new Negociacao(new Date(), 1, 200);
 const headers = new Headers();
 headers.set('Content-Type', 'application/json');
